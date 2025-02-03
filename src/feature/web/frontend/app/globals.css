@@ -1,0 +1,137 @@
+:root {
+    --success-color: #67c23a;
+    --light-success-color: #F2F9ECFF;
+    --warning-color: #E6A23C;
+    --light-warning-color: #FDF6EDFF;
+    --error-color: #F56C6C;
+    --light-error-color: #FFF2F0;
+    --info-color: #909399;
+    --light-info-color: #F5F4F5FF;
+    --light-gray-color: #0000000F;
+    --brand-color: #409EFF;
+    --deep-brand-color: #4077FF;
+    --light-brand-color: #E6F4FFFF;
+    --white-color: #FFFFFF;
+    --black-color: #171717;
+    --focus-hightlight-shadowbox: 0 6px 12px rgba(64, 158, 255, 0.6), 0 0 18px rgba(64, 158, 255, 0.2);
+}
+
+.level-brand-color {
+    --main-color: var(--brand-color);
+    --light-main-color: var(--light-brand-color);
+}
+
+.level-success-color {
+    --main-color: var(--success-color);
+    --light-main-color: var(--light-success-color);
+}
+
+.level-info-color {
+    --main-color: var(--info-color);
+    --light-main-color: var(--light-info-color);
+}
+
+.level-warning-color {
+    --main-color: var(--warning-color);
+    --light-main-color: var(--light-warning-color);
+}
+
+.level-error-color {
+    --main-color: var(--error-color);
+    --light-main-color: var(--light-error-color);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #FFFFFF;
+        --foreground: #171717;
+        --gray-color: #D9D9D9;
+        --disable-color: #0000000A;
+        --focus-shadowbox: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+        --open-shadowbox: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0A0A0A;
+        --foreground: #EDEDED;
+        --gray-color: #D9D9D97F;
+        --disable-color: #FFFFFF7F;
+        --focus-shadowbox: 0 2px 4px rgba(237, 237, 237, .12), 0 0 6px rgba(237, 237, 237, .04);
+        --open-shadowbox: 0 2px 12px 0 rgba(237, 237, 237, .1);
+    }
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/*
+  10. Disable link
+ */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

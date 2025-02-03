@@ -1,0 +1,146 @@
+.button-container {
+    height: 50px;
+    font-weight: 400;
+    display: grid;
+    cursor: pointer;
+    min-width: 120px;
+    position: relative;
+    place-items: center;
+    border-radius: 25px;
+    transition: 300ms ease;
+    padding: 15px 20px 15px 20px;
+}
+
+.icon-circle {
+    animation: icon-circle-anima 1s linear infinite;
+}
+
+.button-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    border-radius: 100px;
+    pointer-events: none;
+    transform: scale(0);
+    transition: all 300ms ease;
+    background-color: var(--light-main-color);
+    z-index: 9999;
+}
+
+.button {
+    padding: 0;
+    border: none;
+    display: grid;
+    color: inherit;
+    cursor: inherit;
+    appearance: none;
+    pointer-events: none;
+    background-color: transparent;
+    grid-template-columns: auto auto;
+}
+
+@keyframes icon-circle-anima {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shadow-down {
+    0% {
+        opacity: 0.2;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes shadow-up {
+    0% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 0.1;
+        transform: scale(1.5);
+    }
+    90% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.button-container-primary {
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+
+.button-container-primary:hover {
+    color: var(--main-color);
+    background-color: var(--light-main-color);
+}
+
+.button-container-default {
+    color: var(--foreground);
+    border: 1px solid var(--gray-color);
+    background-color: var(--background);
+}
+
+.button-container-default:hover {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.button-container-dashed {
+    color: var(--foreground);
+    border: 1px dashed var(--gray-color);
+    background-color: var(--background);
+}
+
+.button-container-dashed:hover {
+    color: var(--main-color);
+    border: 1px dashed var(--main-color);
+}
+
+.button-container-text {
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+.button-container-text:hover {
+    color: var(--main-color);
+    background-color: var(--light-main-color);
+}
+
+.button-container-link {
+    color: var(--main-color);
+    background-color: var(--background);
+}
+
+.button-container-fill-disable {
+    color: var(--gray-color);
+    cursor: not-allowed;
+    border: 1px solid var(--gray-color);
+    background-color: var(--disable-color);
+}
+
+.button-container-dashed-disable {
+    color: var(--gray-color);
+    cursor: not-allowed;
+    border: 1px dashed var(--gray-color);
+}
+
+.button-container-text-disable {
+    color: var(--gray-color);
+    cursor: not-allowed;
+}

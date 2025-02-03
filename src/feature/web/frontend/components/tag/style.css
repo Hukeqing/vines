@@ -1,0 +1,20 @@
+.tag-container {
+    display: inline;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.tag-close {
+    display: inline;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.tag-close:hover {
+    color: var(--white-color);
+    background-color: var(--gray-color);
+}
